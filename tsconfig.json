@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // "strict" liga TODAS as checagens rígidas do TypeScript de uma vez
+    // (nada de "any" escondido, nada de variável usada antes de existir).
+    // Isso pega muitos bugs ainda durante o desenvolvimento, antes do site
+    // ir para o ar.
+    "strict": true,
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    // "@/algo" em vez de "../../../algo" — caminhos de import mais limpos.
+    "baseUrl": ".",
+    "paths": { "@/*": ["./*"] }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
